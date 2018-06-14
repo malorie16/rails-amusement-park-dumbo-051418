@@ -1,0 +1,13 @@
+<ul>
+<!-- <% @attractions.each do |attraction| %>
+  <li>
+    <%=  attraction.name %>
+    <%=  attraction.tickets %>
+    <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+  </li> -->
+
+  <%= form_for @attractions do |f| %>
+    <%= f.collection_select @attraction.id, @attractions, :id, @attraction.name %>
+  <!-- <% end %> -->
+<% end  %>
+</ul>
